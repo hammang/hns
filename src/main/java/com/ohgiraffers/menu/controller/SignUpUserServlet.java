@@ -26,7 +26,7 @@ public class SignUpUserServlet extends HttpServlet {
 		// 요청 값 꺼내기
 		String userName = request.getParameter("userName");
 		String userId = request.getParameter("userId");
-		String password = request.getParameter("userPwd");
+		String userPwd = request.getParameter("userPwd");
 		
 		// 비지니스 로직 호출
 		SignUpUserService service = new SignUpUserService();
@@ -34,7 +34,7 @@ public class SignUpUserServlet extends HttpServlet {
 		UserDTO user = new UserDTO();
 		user.setUserName(userName);
 		user.setUserId(userId);
-		user.setUserPwd(userId);
+		user.setUserPwd(userPwd);
 		
 		int result = service.signUpUser(user);
 		

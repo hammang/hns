@@ -9,6 +9,15 @@ import com.ohgiraffers.menu.common.Template;
 import com.ohgiraffers.menu.model.dto.UserDTO;
 
 public class UserDAO {
+/*	
+	CREATE TABLE `tbl_user` (
+			`user_code`	int auto_increment NOT NULL primary key,
+			`user_name`	varchar(30)	NOT NULL,
+			`user_id`	varchar(30)	NOT NULL,
+		    `user_pwd`  varchar(30) NOT NULL,
+		    `activation_status` varchar(3) default 'Y'
+		);
+*/
 
 	public int signUpUser(Connection con, UserDTO user) {
 		
